@@ -1,0 +1,21 @@
+<div class="title">
+<h2>rando-M-usic</h2>
+<img src="" alt="M">
+</div>
+
+<h3>Image and intro here</h3>
+
+<br>
+<hr>
+
+<%= form_tag("/soundcloud", method: "get") do %>
+  <%= label_tag(:search, "Choose Genre:") %>
+  <%= collection_select( :search, :search, Genre.all, :name, :name, :include_blank => true ) %>
+  <%= submit_tag "Music Please!" %>
+<% end %>
+
+
+<hr>
+
+<br>
+<p>Find me in app/views/pages/home.html.erb</p>
