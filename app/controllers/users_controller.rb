@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by :id => params[:id]
+    @user_songs = @user.songs
   end
 
   def new

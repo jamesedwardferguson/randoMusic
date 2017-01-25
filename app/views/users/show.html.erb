@@ -1,43 +1,31 @@
-
+<!-- user name display -->
 <h3> <%= @user.name  %>'s Profile</h3>
 
-<h5><%= @user.email %></h5>
 
-<!-- Only show these buttons if the @user var contains the same user as @current_user -->
+<!-- Edit user -->
 <% if @user == @current_user %>
 <div class="controls">
-  <%= link_to "Edit user", edit_user_path(@user) %> |
-  <%= link_to "Delete account", user_path(@user), :method => :delete, :data => { :confirm => "Are you sure?"} %>
+  <%= link_to "Edit profile", edit_user_path(@user) %>
 </div>
 <% end %>
 
 <br>
+<!-- Show and choose Genre / sumbit search  -->
 <%= form_tag("/soundcloud", method: "get") do %>
   <%= label_tag(:search, "Choose Genre:") %>
   <%= collection_select( :search, :search, Genre.all, :name, :name, :include_blank => true ) %>
   <%= submit_tag "Music Please!" %>
 <% end %>
 
-<h5> User Playlists </h5>
-<% @user.playlists.each do |playlist| %>
+<!-- Display saved songs and link to play song -->
+<h5> Your saved songs </h5>
 
-<h6>
-  <%= link_to(playlist.name, playlist_path(playlist) ) %>
-</h6>
-
-<!-- For current playlist, print out all songs -->
-<ul>
-  <% playlist.songs.each do |song| %>
-    <li>
-      <%= link_to(song.name, song_path(song) ) %>
-      by
-      <%= link_to(song.artist.name, artist_path(song.artist) ) %>
-    </li>
-  <% end %>
-</ul>
+<div class="song_container"></div>
+<% @user.songs.each do |s| %>
+  <div><%= link_to(image_tag s.artwork) %></div>
+  <h3>Song Title: <%= s.name %></h3>
 <% end %>
+</div>
 
-
-<hr>
 
 <p>Find me in app/views/users/show.html.erb</p>

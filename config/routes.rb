@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
     get '/' => 'pages#soundcloud_API'
     get '/soundcloud' => 'songs#soundcloud_search', :as => 'soundcloud'
-
+    
 
     get "/users/edit" => 'users#edit', :as => 'edit_user'
     resources :users, :except => [:edit]

@@ -1,8 +1,20 @@
-button {
+.button1 {
   width: 500px;
   height: 30px;
   background-color: rgba(0,0,0,0.6);
-  color: white;
+  color: silver;
   font-size: 15px;
-  margin-top: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+}
+
+.button2 {
+  width: 500px;
+  height: 30px;
+  background-color: rgba(0,0,0,0.6);
+  color: silver;
+  font-size: 15px;
+  margin-top: 10px;
+
 }

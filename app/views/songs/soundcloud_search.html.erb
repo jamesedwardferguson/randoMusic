@@ -1,7 +1,19 @@
+<%= form_tag("/soundcloud", method: "get") do %>
+<%= hidden_field :search, value: @query %>
+<%= submit_tag "try another random song" %>
+<% end %>
 
-<button type="button" name="button">Save me for later</button>
-<%#= @track %>
-<br>
-<%#= @track_url %>
 <br>
 <%= @embed_info['html'].html_safe %>
+<br>
+
+<% if @current_user %>
+    <%= form_for @song, :url => "/songs", :method => :post, :class => "button2" do |s| %>
+        <%= hidden_field_tag :song_id, @sample["id"], :required => true %>
+        <%= submit_tag "Save this song" %>
+    <% end %>
+<% end %>
+
+
+
+<p>Find me in app/views/songs/soundcloud_search.html.erb</p>
