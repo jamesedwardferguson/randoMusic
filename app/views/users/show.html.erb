@@ -10,9 +10,10 @@
 
 <!-- Show and choose Genre / sumbit search  -->
 <%= form_tag("/soundcloud", method: "get") do %>
-  <%= label_tag(:search, "Choose Genre:") %>
-  <%= collection_select( :search, :search, Genre.all, :name, :name, :include_blank => true ) %>
-  <%= submit_tag "Music Please!", :class => "submit_button"%>
+
+<p class="genre"> <%= label_tag(:search, "Choose Genre:") %>
+  <%= collection_select( :search, :search, Genre.all, :name, :name, :include_blank => true ) %> </p>
+  <%= submit_tag "random song", :class => "submit_button3"%>
 <% end %>
 
 <h5> Your saved songs </h5>
@@ -22,9 +23,7 @@
 <div class="song_container"></div>
 <% @user.songs.each do |s| %>
   <div><%= link_to(image_tag( s.artwork ), song_path(s)) %></div>
-
   <h4><%= s.name %></h4>
-
   <%= link_to "remove song", song_path(s), :method => :delete, :data => { :confirm => "Are you sure?"} %>
 <% end %>
 </div>

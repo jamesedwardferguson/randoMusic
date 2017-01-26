@@ -8,7 +8,7 @@
   <% end %>
 </ul>
 <% end %>
-
+<div class="sign_up">
 <%= form_for @user do |f| %>
   <p>
     <%= f.label :name %>
@@ -27,5 +27,6 @@
     <%= f.password_field :password_confirmation, :required => true %>
   </p>
 
-  <%= f.submit %>
+  <%= f.submit :class => "new_user"%>
 <% end %>
+</div>

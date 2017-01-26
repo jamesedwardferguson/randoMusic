@@ -1,4 +1,5 @@
 <div class="login">
+
 <h3>LOGIN TO YOUR ACCOUNT</h3>
 
 <%= form_tag login_path do %>
@@ -11,8 +12,6 @@
   <%= password_field_tag :password, "", :required => true %>
 </p>
 
-<%= submit_tag "Login" %>
+<%= submit_tag "Login", :class => "login_submit"%>
 <% end %>
 </div>
-
-<p>localhost3000/login (session - new.html.erb)</p>

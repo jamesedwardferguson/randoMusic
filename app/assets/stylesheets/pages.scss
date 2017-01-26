@@ -9,13 +9,27 @@ h3 {
   text-shadow: 1px 1px 1px #F4A460;
 }
 
+p.genre {
+  color: #F4A460;
+  font-size: 25px;
+  margin-left: 15vw;
+}
+
+#search_search {
+  background-color: rgba(0,0,0,0.4);
+  width: 15vw;
+  height: 3vh;
+  color: #F4A460;
+  // margin-left: 2vw;
+}
+
 .genre_search {
   background-color: rgba(0,0,0,0.4);
   color: gainsboro;
   font-size: 2.5rem;
   font-family: 'Bree Serif', serif;
-  margin: 40px auto 20px auto;
-  height: 25vh;
+  margin: 70px auto 20px auto;
+  height: 20vh;
   width: 25vw;
   border: 3px solid gainsboro;
   border-radius: 30px;
@@ -27,16 +41,12 @@ color: #F4A460;
 border: 3px solid #F4A460;
 }
 
-#search_search {
-  background-color: rgba(0,0,0,0.4);
-  width: 15vw;
-  height: 20px;
-  color: #F4A460;
+// ========= streaming music page below ==
 
-}
 .submit_button {
 	background-color: rgba(0,0,0,0.4);
   font-family: 'Bree Serif', serif;
+  font-size: 1.5rem;
 	width: 25vw;
   display: inline-block;
   padding: 10px;
@@ -56,6 +66,7 @@ border: 3px solid #F4A460;
 .submit_button2 {
 	background-color: rgba(0,0,0,0.4);
   font-family: 'Bree Serif', serif;
+  font-size: 1.2rem;
 	width: 25vw;
   display: inline-block;
   padding: 10px;
