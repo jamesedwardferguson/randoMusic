@@ -14,7 +14,7 @@
  *= require_self
  */
  body {
-   background: url("background3.png");
+   background: image-url("background3.png");
    background-size: cover;
    background-repeat: no-repeat;
    overflow: hidden;
@@ -87,12 +87,22 @@ nav {
   padding-top: 15px;
 }
 
+input[type="submit"] {
+  outline: none;
+}
+
 .nav_wrapper {
-  padding-left: 15vw;
+  padding-left: 12vw;
   padding-bottom: 20vh;
   height: 5vh;
-  width: 20vw;
-  border: 1px solid white;
+  width: 24vw;
+  margin-top: 20px;
+  // border: 1px solid white;
+}
+
+#nav_button p {
+  position: absolute;
+  top: -25px;
 }
 
 #nav_button a:link {

@@ -21,7 +21,7 @@
         </div>
 
         <nav>
-            <div class="nav_wrapper">
+            <div class="nav_wrapper <%= 'logged_in' if @current_user %>">
             <div id="nav_button">
 
                 <% if @current_user.present? %>
