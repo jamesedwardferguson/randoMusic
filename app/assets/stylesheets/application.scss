@@ -99,7 +99,10 @@ input[type="submit"] {
 }
 
 #nav_button a {
-  position: relative;
+// <<<<<<< HEAD
+//   position: relative;
+// =======
+// >>>>>>> version_two
     text-decoration: none;
     font-family: 'Bree Serif', serif;
     font-size: 1.9rem;
@@ -122,5 +125,4 @@ p {
   width: 20vw;
   height: 3vh;
   color: #F4A460;
-  /*border: 1px solid white;*/
 }
