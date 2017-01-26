@@ -105,11 +105,11 @@ input[type="submit"] {
   top: -25px;
 }
 
-#nav_button a:link {
+#nav_button a {
     text-decoration: none;
     font-family: 'Bree Serif', serif;
     font-size: 1.9rem;
-    /*border: 1px solid white;*/
+    color: #F4A460;
     float: left;
     text-align: center;
     margin: 0.6vw;
@@ -127,5 +127,4 @@ p {
   width: 20vw;
   height: 3vh;
   color: #F4A460;
-  /*border: 1px solid white;*/
 }
