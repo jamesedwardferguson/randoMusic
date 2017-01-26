@@ -7,7 +7,6 @@ class SongsController < ApplicationController
 
     @query = params[:search][:search]
     @track = client.get('/tracks', :genres => @query)
-
     @sample = @track.sample
     @url = @sample["permalink_url"]
     @title = @sample["title"]
@@ -22,7 +21,12 @@ class SongsController < ApplicationController
   end
 
   def show
-    @song = Song.find_by :id => params["id"]
+    client = Soundcloud.new(:client_id => '5ea0d1a91cf7d70589d1a1c62535e05a',
+                            :client_secret => 'eca7b4b76ce1f0b282f378f375051a8e')
+
+    @song = Song.find params[:id]
+    @embed_info = client.get('/oembed', :url => @song.url)
+    puts @embed_info['html']
   end
 
   def create
@@ -34,7 +38,8 @@ class SongsController < ApplicationController
       :url => @track[:permalink_url],
       :artwork => @track[:artwork_url],
       :name => @track[:title],
-      :user_id => @current_user.id
+      :user_id => @current_user.id,
+      :soundcloud_id => @track[:id]
     })
 
     if @song.save

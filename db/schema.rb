@@ -69,8 +69,9 @@ ActiveRecord::Schema.define(version: 20170124224001) do
     t.string   "url"
     t.string   "artwork"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "soundcloud_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "users", force: :cascade do |t|

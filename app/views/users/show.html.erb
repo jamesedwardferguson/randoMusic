@@ -1,31 +1,32 @@
 <!-- user name display -->
 <h3> <%= @user.name  %>'s Profile</h3>
 
-
 <!-- Edit user -->
 <% if @user == @current_user %>
 <div class="controls">
-  <%= link_to "Edit profile", edit_user_path(@user) %>
+  <%#= link_to "Edit profile", edit_user_path(@user) %>
 </div>
 <% end %>
 
-<br>
 <!-- Show and choose Genre / sumbit search  -->
 <%= form_tag("/soundcloud", method: "get") do %>
   <%= label_tag(:search, "Choose Genre:") %>
   <%= collection_select( :search, :search, Genre.all, :name, :name, :include_blank => true ) %>
-  <%= submit_tag "Music Please!" %>
+  <%= submit_tag "Music Please!", :class => "submit_button"%>
 <% end %>
 
-<!-- Display saved songs and link to play song -->
 <h5> Your saved songs </h5>
 
+<div class="user_profile">
+<!-- Display saved songs and link to play song -->
 <div class="song_container"></div>
 <% @user.songs.each do |s| %>
-  <div><%= link_to(image_tag s.artwork) %></div>
-  <h3>Song Title: <%= s.name %></h3>
+  <div><%= link_to(image_tag( s.artwork ), song_path(s)) %></div>
+
+  <h4><%= s.name %></h4>
+
+  <%= link_to "remove song", song_path(s), :method => :delete, :data => { :confirm => "Are you sure?"} %>
 <% end %>
 </div>
 
-
-<p>Find me in app/views/users/show.html.erb</p>
+</div>

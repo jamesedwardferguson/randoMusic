@@ -1,8 +1,14 @@
-<h1>Songs#show</h1>
+<h1>My Saved Songs</h1>
 
 
+<%= form_tag("/soundcloud", method: "get") do %>
+<%= hidden_field :search, value: @query %>
+<%= submit_tag "try another random song" %>
+<% end %>
 
-
+<br>
+<%= @embed_info['html'].html_safe %>
+<br>
 
 
 <p>Find me in app/views/songs/show.html.erb</p>
