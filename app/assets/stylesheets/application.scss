@@ -91,21 +91,15 @@ input[type="submit"] {
   outline: none;
 }
 
-.nav_wrapper {
-  padding-left: 12vw;
-  padding-bottom: 20vh;
-  height: 5vh;
-  width: 24vw;
-  margin-top: 20px;
-  // border: 1px solid white;
-}
-
 #nav_button p {
   position: absolute;
-  top: -25px;
+  left: calc(25vw - 8rem);
+  top: -3vh;
+  color: gainsboro;
 }
 
 #nav_button a {
+  position: relative;
     text-decoration: none;
     font-family: 'Bree Serif', serif;
     font-size: 1.9rem;
@@ -113,6 +107,7 @@ input[type="submit"] {
     float: left;
     text-align: center;
     margin: 0.6vw;
+    left: calc(25vw - 10rem);
 }
 
 #nav_button a:hover {
