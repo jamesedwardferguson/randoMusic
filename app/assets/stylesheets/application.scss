@@ -74,13 +74,13 @@
 }*/
 
 nav {
-  background-color: rgba(0,0,0,0.4);
+  // background-color: rgba(0,0,0,0.4);
   color: gainsboro;
   text-align: center;
   height: 15vh;
   width: 50vw;
   font-size: 20px;
-  border: 2px solid gainsboro;
+  // border: 2px solid gainsboro;
   border-radius: 30px;
   position: relative;
   margin: 20px auto 70px auto;
@@ -103,6 +103,7 @@ input[type="submit"] {
 #nav_button p {
   position: absolute;
   top: -25px;
+  color: gainsboro;
 }
 
 #nav_button a {
