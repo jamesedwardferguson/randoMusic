@@ -1,84 +1,81 @@
 h1 {
- color: #F4A460;
- font-family: monospace;
- font-size: 3rem;
+    color: #F4A460;
+    font-family: monospace;
+    font-size: 3rem;
 }
 
 h3 {
-  color: gainsboro;
-  text-shadow: 1px 1px 1px #F4A460;
+    color: gainsboro;
+    text-shadow: 1px 1px 1px #F4A460;
 }
 
 p.genre {
-  color: #F4A460;
-  font-size: 25px;
-  margin-left: 15vw;
+    color: #F4A460;
+    font-size: 25px;
+    margin-left: 15vw;
 }
 
 #search_search {
-  background-color: rgba(0,0,0,0.4);
-  width: 15vw;
-  height: 3vh;
-  color: #F4A460;
-  // margin-left: 2vw;
+    background-color: rgba(0,0,0,0.4);
+    width: 15vw;
+    height: 3vh;
+    color: #F4A460;
 }
 
 .genre_search {
-  background-color: rgba(0,0,0,0.4);
-  color: gainsboro;
-  font-size: 2.5rem;
-  font-family: 'Bree Serif', serif;
-  margin: 70px auto 20px auto;
-  height: 20vh;
-  width: 25vw;
-  border: 3px solid gainsboro;
-  border-radius: 30px;
-  transition: color 1.5s, border 1.5s, ease-in-out 0.2s;
+    background-color: rgba(0,0,0,0.4);
+    color: gainsboro;
+    font-size: 2.5rem;
+    font-family: 'Bree Serif', serif;
+    margin: 70px auto 20px;
+    height: 20vh;
+    width: 25vw;
+    border: 3px solid gainsboro;
+    border-radius: 30px;
+    transition: color 1.5s, border 1.5s, ease-in-out 0.2s;
 }
 
 .genre_search:hover {
-color: #F4A460;
-border: 3px solid #F4A460;
+    color: #F4A460;
+    border: 3px solid #F4A460;
 }
-
-// ========= streaming music page below ==
-
+// === streaming music page below ==
 .submit_button {
-	background-color: rgba(0,0,0,0.4);
-  font-family: 'Bree Serif', serif;
-  font-size: 1.5rem;
-	width: 25vw;
-  display: inline-block;
-  padding: 10px;
-  margin: 25px auto;
-  border: 2px solid gainsboro;
-  border-radius: 30px;
-  text-decoration: none;
-  color: gainsboro;
-  transition: color 1.5s, border 1.5s, ease-in-out 0.2s;
+    background-color: rgba(0,0,0,0.4);
+    font-family: 'Bree Serif', serif;
+    font-size: 1.5rem;
+    width: 25vw;
+    display: inline-block;
+    padding: 10px;
+    margin: 25px auto;
+    border: 2px solid gainsboro;
+    border-radius: 30px;
+    text-decoration: none;
+    color: gainsboro;
+    transition: color 1.5s, border 1.5s, ease-in-out 0.2s;
 }
 
 .submit_button:hover {
-  color: #F4A460;
-  border: 2px solid #F4A460;
+    color: #F4A460;
+    border: 2px solid #F4A460;
 }
 
 .submit_button2 {
-	background-color: rgba(0,0,0,0.4);
-  font-family: 'Bree Serif', serif;
-  font-size: 1.2rem;
-	width: 25vw;
-  display: inline-block;
-  padding: 10px;
-  margin: 15px auto;
-  border: 2px solid gainsboro;
-  border-radius: 30px;
-  text-decoration: none;
-  color: gainsboro;
-  transition: color 1.5s, border 1.5s, ease-in-out 0.2s;
+    background-color: rgba(0,0,0,0.4);
+    font-family: 'Bree Serif', serif;
+    font-size: 1.2rem;
+    width: 25vw;
+    display: inline-block;
+    padding: 10px;
+    margin: 15px auto;
+    border: 2px solid gainsboro;
+    border-radius: 30px;
+    text-decoration: none;
+    color: gainsboro;
+    transition: color 1.5s, border 1.5s, ease-in-out 0.2s;
 }
 
 .submit_button2:hover {
-  color: #F4A460;
-  border: 2px solid #F4A460;
+    color: #F4A460;
+    border: 2px solid #F4A460;
 }
